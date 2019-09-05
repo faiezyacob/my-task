@@ -1,4 +1,4 @@
-## About MDM
+## About mytask
 
 A web app to keep track of your task made using Laravel and Vue.js
 
@@ -20,4 +20,4 @@ You can try this out <a href="#">TBA</a>
 
 ## License
 
-MyDigitalMessage is an open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Mytask is an open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
