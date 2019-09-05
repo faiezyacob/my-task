@@ -1,6 +1,6 @@
 ## About MDM
 
-It's a web application that gives the users the ability to write a digital birthday or anniversary message made using Laravel. 
+A web app to keep track of your task made using Laravel and Vue.js
 
 ## How to install
 
