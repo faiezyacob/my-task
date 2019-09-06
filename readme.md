@@ -13,7 +13,8 @@ A web app to keep track of your task made using Laravel and Vue.js
 
 ## Screenshots
 
-TBA
+<a href="https://ibb.co/rQ4WgTf"><img src="https://i.ibb.co/2FgbwmY/image.png" alt="image" border="0"></a>
+<a href="https://ibb.co/QnGFLpC"><img src="https://i.ibb.co/TR5B6Yb/image.png" alt="image" border="0"></a>
 
 ## Demo
 You can try this out <a href="#">TBA</a>
