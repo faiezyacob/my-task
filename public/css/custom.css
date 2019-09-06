@@ -11,6 +11,7 @@
 	cursor: pointer;
 }
 
+
 .btn-vue {
 	color: #fff;
   	background-color: #41B883;
@@ -22,4 +23,19 @@
   color: #fff;
   background-color: #379e70;
   border-color: #379e70;
+}
+
+
+
+.grey {
+	color: #bfbfbf;
+}
+
+
+body {
+	padding-bottom: 50px;
+}
+
+.btn-max {
+	width: 100%;
 }

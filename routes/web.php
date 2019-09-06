@@ -20,4 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/tasks', 'TaskController@index');
+Route::get('/tasks/related', 'TaskController@related');
 Route::get('/tasks/form', 'TaskController@showForm');
+Route::get('/tasks/edit/{id}', 'TaskController@editForm');
+Route::post('tasks/store', 'TaskController@store');
+Route::delete('/tasks/delete/{id}', 'TaskController@destroy');

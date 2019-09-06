@@ -14,9 +14,22 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $task = Task::where('user_id', \Auth::user()->id)->get();
+        $i = 0;
+        $tasks = Task::where('user_id', \Auth::user()->id)->get();
 
-        return $task;
+        foreach ($tasks as $task)
+        {
+            if ($task->related !=  null) {
+                $titles = Task::where('id', $task->related)->get();
+                foreach ($titles as $title)
+                {
+                    $temp = $title->title;
+                    $tasks[$i]["temp"] = $temp;
+                }
+            }
+            $i++;
+        }
+        return $tasks;
     }
 
     /**
@@ -37,11 +50,14 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
+        $obj = $request->related;
+        $id = $obj['id'];
+
         $task = new Task();
-        $task->title = $request->title;
-        $task->description = $request->description;
+        $task->title = ucfirst($request->title);
+        $task->description = ucfirst($request->description);
         $task->due = $request->due;
-        $task->related = $request->related;
+        $task->related = $id;
         $task->user_id = auth()->id();
         $task->save();
 
@@ -104,5 +120,16 @@ class TaskController extends Controller
     public function showForm()
     {
         return view ('create');
+    }
+
+    public function editForm()
+    {
+        return view ('edit');
+    }
+
+    public function related() 
+    {
+        $task = Task::select('id', 'title')->get();
+        return $task;
     }
 }
